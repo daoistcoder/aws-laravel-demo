@@ -1,11 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContentCreatorController;
 use App\Http\Controllers\CurriculumLeadController;
-use App\Http\Controllers\SearchController;
+use App\Http\Controllers\PlacementQuestionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,4 +61,9 @@ Route::middleware(['auth', 'role:curriculum_lead'])->group(function () {
     Route::get('/curriculum_lead/skills/map/notification', [CurriculumLeadController::class, 'SkillsMapNotification'])->name('curriculum_lead.skills.map.notification');
     Route::get('/curriculum_lead/skills/map/confirm/{id}', [CurriculumLeadController::class, 'SkillsMapConfirm'])->name('confirm.skills_map');
     Route::post('/curriculum_lead/skills/map/update', [CurriculumLeadController::class, 'SkillsMapUpdate'])->name('update.skills_map');
+});
+
+//Placement Question for Student
+Route::middleware('auth')->group(function () {
+    Route::get('/placement_questions/{question_set_number}', [PlacementQuestionController::class, 'PlacementQuestion'])->name('user.placement_question');
 });
