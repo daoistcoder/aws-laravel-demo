@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('placement_questions', function (Blueprint $table) {
+        Schema::create('content_areas', function (Blueprint $table) {
             $table->id();
+
+            $table->string('content_area_name')->nullable();
+            $table->unsignedBigInteger('grade_level_id')->nullable();
+            $table->foreign('grade_level_id')->references('id')->on('grade_levels')->onDelete('set null');
             $table->timestamps();
-            $table->string('grade_level')->nullable();
-            $table->string('skill_level')->nullable();
-            $table->string('content_area')->nullable();
-            $table->string('pisa_framework')->nullable();
-            $table->string('solo_framework')->nullable();
         });
     }
 
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('placement_questions');
+        Schema::dropIfExists('content_areas');
     }
 };

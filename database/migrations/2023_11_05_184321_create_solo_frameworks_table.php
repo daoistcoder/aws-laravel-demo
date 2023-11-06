@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('place_course_skills', function (Blueprint $table) {
+        Schema::create('solo_frameworks', function (Blueprint $table) {
             $table->id();
+
+            $table->string('pisa_framework_name')->nullable();
             $table->timestamps();
-            $table->string('course_skill_name')->nullable();
-            $table->unsignedBigInteger('sub_topic_id')->nullable();
-            $table->foreign('sub_topic_id')->references('id')->on('place_sub_topics')->onDelete('set null');
         });
     }
 
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('place_course_skills');
+        Schema::dropIfExists('solo_frameworks');
     }
 };

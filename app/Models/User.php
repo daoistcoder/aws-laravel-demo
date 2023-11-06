@@ -38,4 +38,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function userAnswers()
+    {
+        return $this->hasMany(PlacementUserAnswer::class, 'user_id');
+    }
 }

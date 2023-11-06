@@ -66,4 +66,7 @@ Route::middleware(['auth', 'role:curriculum_lead'])->group(function () {
 //Placement Question for Student
 Route::middleware('auth')->group(function () {
     Route::get('/placement_questions/{question_set_number}', [PlacementQuestionController::class, 'PlacementQuestion'])->name('user.placement_question');
+    Route::post('/placement_question/save/{question_id}', [PlacementQuestionController::class, 'SaveUserAnswer'])->name('saveUserAnswer');
+    Route::get('/placement_question/{question_set_number}', [PlacementQuestionController::class, 'PlacementQuestion'])->name('PlacementQuestion');
+    Route::get('/finish', [PlacementQuestionController::class, 'PlacementFinish'])->name('placement_question.finish');
 });

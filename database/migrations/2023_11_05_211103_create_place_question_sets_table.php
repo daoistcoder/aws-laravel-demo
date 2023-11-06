@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('place_sub_topics', function (Blueprint $table) {
+        Schema::create('place_question_sets', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
 
-            $table->string('sub_topic_name')->nullable();
-            $table->unsignedBigInteger('topic_id')->nullable();
-            $table->foreign('topic_id')->references('id')->on('place_topics')->onDelete('set null');
+            $table->string('question_set_number')->nullable();
+            $table->string('question_set_name')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('place_sub_topics');
+        Schema::dropIfExists('place_question_sets');
     }
 };

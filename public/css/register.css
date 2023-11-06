@@ -1,0 +1,135 @@
+* {
+    color: black;
+}
+
+body {
+    background-color: #8EDCE7;
+    background-size: 100% 60%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 100vh;
+}
+
+.form-check-label {
+    color: #0B2D72;
+}
+
+.form-check {
+    margin-top: 20px;
+}
+
+a.forgot-password {
+    color: #0B2D72;
+    text-decoration: none;
+}
+
+.forgot-password {
+    margin-top: 20px;
+}
+
+.login-link {
+    color: #4B4B4B;
+}
+
+.login {
+    color: #188fff !important;
+    text-decoration: none;
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.btn {
+    width: 456px;
+    height: 60px;
+    margin-top: 30px;
+    border-radius: 20px;
+    background: #859CFF;
+    box-shadow: 0px 6px 0px 0px #7187E4;
+    font-family: 'Omnes Regular', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #ffff;
+}
+
+.btn:hover {
+    color: #ffff;
+}
+
+.register-box {
+    font-family: 'Omnes Regular', sans-serif;
+    float: right;
+    width: 520px;
+    margin-top: 22.5vh;
+    margin-right: -22.5vw;
+    padding: 30px 32px 40px 32px;
+    border-radius: 20px;
+    gap: 30px;
+    height: 630px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 8px 10px 0px 0px #0000001A;
+
+}
+
+.register-box h2 {
+    font-family: 'Omnes Regular', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #4B4B4B;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    width: 456px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}
+
+.firstn-width .form-control {
+    width: 210px;
+}
+
+.lastn-width .form-control {
+    width: 223px;
+}
+
+.left-text {
+    float: left;
+    width: 40%;
+}
+
+.left-text-content {
+    font-family: 'Omnes Regular', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 41.6px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 55px;
+    margin-left: -390px;
+}
+
+.name-fields {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+/* .name-fields .form-group {
+    flex: 1;
+} */
+
+.name-fields .form-group:not(:last-child) {
+    margin-right: 10px; 
+}
