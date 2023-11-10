@@ -68,6 +68,7 @@
 
                     <div class="tools">
                         <img src="{{ asset('images/cursor.png')}}" class="" id="" alt="cursor">
+                        <div class="divider"></div>
                         <img src="{{ asset('images/hint.png')}}" class="" id="" alt="hint">
                     </div>
                     

@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (selectedChoice) {
                 selectedChoice.classList.remove('selected-choice');
                 if (selectedChoice.getAttribute('data-has-iframe') !== 'true') {
-                    selectedChoice.style.height = '10vh';
+                    selectedChoice.style.height = '12vh';
                 }
             }
 
@@ -88,15 +88,15 @@ document.addEventListener("DOMContentLoaded", function() {
             const feedbackContainer = document.querySelector('.feedback-container');
             const transitionDuration = '2s';
     
-            container.style.transition = `height ${transitionDuration}`;
+            // container.style.transition = `height ${transitionDuration}`;
             feedbackContainer.style.transition = `bottom ${transitionDuration}, opacity ${transitionDuration}`;
     
-            // container.style.height = '75vh';
+            container.style.height = '100vh';
             feedbackContainer.style.bottom = '0';
             feedbackContainer.style.opacity = 1;
             feedbackContainer.style.position = 'fixed';
             feedbackContainer.style.height = '15%';
-            container.style.overflow = 'visible';
+            // container.style.overflow = 'visible';
             // document.body.style.overflow = 'hidden';
             // document.body.style.backgroundColor = '#FDCA3E';
     
