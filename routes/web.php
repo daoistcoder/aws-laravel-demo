@@ -70,3 +70,30 @@ Route::middleware('auth')->group(function () {
     Route::get('/placement_question/{question_set_number}', [PlacementQuestionController::class, 'PlacementQuestion'])->name('PlacementQuestion');
     Route::get('/finish', [PlacementQuestionController::class, 'PlacementFinish'])->name('placement_question.finish');
 });
+
+//Activity Question for Student
+Route::middleware('auth')->group(function () {
+    Route::get('/activity_questions/{question_set_number}', [PlacementQuestionController::class, 'ActivityQuestion'])->name('user.activity_question');
+    Route::post('/activity_question/save/{question_id}', [PlacementQuestionController::class, 'SaveUserAnswer'])->name('saveUserAnswer');
+    Route::get('/activity_question/{question_set_number}', [PlacementQuestionController::class, 'ActivityQuestion'])->name('ActivityQuestion');
+    Route::get('/finish', [PlacementQuestionController::class, 'ActivityFinish'])->name('activity_question.finish');
+});
+
+//Exercise Question for Student
+Route::middleware('auth')->group(function () {
+    Route::get('/exercise_questions/{question_set_number}', [PlacementQuestionController::class, 'ExerciseQuestion'])->name('user.exercise_question');
+    Route::post('/exercise_question/save/{question_id}', [PlacementQuestionController::class, 'SaveUserAnswer'])->name('saveUserAnswer');
+    Route::get('/exercise_question/{question_set_number}', [PlacementQuestionController::class, 'ExerciseQuestion'])->name('ExerciseQuestion');
+    Route::get('/finish', [PlacementQuestionController::class, 'ActivityFinish'])->name('exercise_question.finish');
+});
+
+//Summative Assesment Question for Student
+Route::middleware('auth')->group(function () {
+    Route::get('/summative_questions/{question_set_number}', [PlacementQuestionController::class, 'SummativeQuestion'])->name('user.summative_question');
+    Route::post('/summative_question/save/{question_id}', [PlacementQuestionController::class, 'SaveUserAnswer'])->name('saveUserAnswer');
+    Route::get('/summative_question/{question_set_number}', [PlacementQuestionController::class, 'SummativeQuestion'])->name('SummativeQuestion');
+    Route::get('/finish', [PlacementQuestionController::class, 'ActivityFinish'])->name('summative_question.finish');
+});
+
+
+
